@@ -15,7 +15,7 @@ private String batteriSize;
     public Computer(
             int price,
             int UUID,
-            int productNumber,
+            String productNumber,
             String brand,
             String RAM,
             String harddiskType,
