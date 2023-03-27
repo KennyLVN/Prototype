@@ -4,6 +4,8 @@ import Products.Monitor;
 
 import java.sql.*;
 
+import static javax.swing.UIManager.getInt;
+
 public class Main {
 
 
@@ -47,38 +49,27 @@ public class Main {
         //Query Database
         try {
 
-            PreparedStatement queryStatement = connection.prepareStatement("SELECT * FROM PRODUCTS WHERE");
+            PreparedStatement queryStatement = connection.prepareStatement("SELECT * FROM PRODUCTS WHERE UUID = ?");
             queryStatement.setString(1,"");
             ResultSet result = queryStatement.executeQuery();
 
             while(result.next()){
 
-                if(int column7 = result.getInt("Catergory ID") == 1){
 
-                    int column1 = result.getInt("Price");
-                    int column2 = result.getInt("uuid");
-                    String column3 = result.getString("Product Number");
+                  int column1 = result.getInt("Product");
+                   String column2 = result.getString("Product name");
+                    int column3 = result.getInt("Price");
                     String column4 = result.getString("Brand");
-
-                    //String column3 = result.getString("Product name");
-                   // int column2 = result.getInt("Products");
-                   // int column3 = result.getInt("Price");
-
+                    int column5 = result.getInt("uuid");
+                    String column6 = result.getString("Product Number");
+                    int column7 = result.getInt("Category ID");
 
 
-                    //int column7 = result.getInt("Catergory ID");
 
-                    Laptop laptop = new Laptop(
-                            column1,
-                            column2,
-                            column3,
-                            column4
-
-                    );
                 }
 
 
-            }
+
 
         } catch (SQLException e) {
             e.printStackTrace();
