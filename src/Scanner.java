@@ -1,3 +1,7 @@
+import Products.Computer;
+import Products.Laptop;
+import Products.Monitor;
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -52,17 +56,29 @@ public class Scanner {
             while(result.next()){
 
 
-                int column1 = result.getInt("Product");
-                String column2 = result.getString("Product name");
-                int column3 = result.getInt("Price");
-                String column4 = result.getString("Brand");
-                int column5 = result.getInt("uuid");
-                String column6 = result.getString("Product Number");
-                int column7 = result.getInt("Category ID");
+                int product = result.getInt("Product");
+                String product_name = result.getString("Product name");
+                int price = result.getInt("Price");
+                String brand = result.getString("Brand");
+                int uuid = result.getInt("uuid");
+                String product_number = result.getString("Product Number");
+                int category_id = result.getInt("Category ID");
+
+                switch (category_id){
+                   // case 1: Computer computer = new Computer(price,uuid, product_number, brand );
+                   // case 2: Laptop laptop = new Laptop();
+                    //case 3: Monitor monitor = new Monitor();
+
+                }
+
+
 
         }
     } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    public void insert(){
+
     }
 }
