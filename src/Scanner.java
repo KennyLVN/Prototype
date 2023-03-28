@@ -65,9 +65,12 @@ public class Scanner {
                 int category_id = result.getInt("Category ID");
 
                 switch (category_id){
-                   // case 1: Computer computer = new Computer(price,uuid, product_number, brand );
-                   // case 2: Laptop laptop = new Laptop();
-                    //case 3: Monitor monitor = new Monitor();
+                    case 1:
+                        //Computer computer = new Computer(price,uuid, product_number, brand );
+                    case 2:
+                        //Laptop laptop = new Laptop();
+                    case 3:
+                        //Monitor monitor = new Monitor();
 
                 }
 
